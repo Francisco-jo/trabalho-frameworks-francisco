@@ -27,10 +27,44 @@
   </nav>
 
   <div class="container mt-4">
+
     <h1 class="mb-4">Tutorial: Frameworks Front-End</h1>
 
     <p>Frameworks como <strong>Bootstrap</strong> e <strong>jQuery</strong> são amplamente utilizados para agilizar o desenvolvimento web.</p>
+    
+    <hr>
+    <h2 >🟢 Adicionar vários novos elementos com after() e before()</h2>
 
+    <div class="alert alert-info mt-3" role="alert">
+      <h5 class="alert-heading"> O que cada botão faz:</h5>
+      <ul class="mb-0">
+        <li><strong>Texto a frente</strong>: adiciona um novo texto <u>antes</u> do elemento principal.</li>
+        <li><strong>Texto atras</strong>: adiciona um novo texto <u>depois</u> do elemento principal.</li>
+        <li><strong>Remover</strong>: apaga todos os textos adicionados pelos dois botões acima.</li>
+      </ul>
+    </div>
+      <pre><code>$(document).ready(function(){
+        $("#btn1").click(function(){
+          $("img").before('<span class="gerado1"><b>o texto comerça aqui,</b></span>');
+        });
+        $('#btn2').click(function () {
+            $('img').after('<span class="gerado2"><b> , o texto termina aqui</b></span>');
+          });
+        $('#remover').click(function () {
+            $('.gerado1').remove();
+            $('.gerado2').remove();
+          });
+        });</code></pre>
+
+
+
+    <img src="/img/imag5.webp" alt="jQuery" width="100" height="140"><br><br>
+    
+    <button id="btn1">texto a frente</button>
+    <button id="btn2">texto atras</button>
+    <button id="remover">remove</button>
+
+    
     <hr>
 
     <h2>🟢 Bootstrap: Alerta (Alert)</h2>
@@ -80,8 +114,8 @@
     <p>Com o jQuery podemos esconder ou mostrar conteúdos com animação.</p>
     
     <pre><code>$("#btnToggle").click(function() {
-  $("#texto").slideToggle();
-});</code></pre>
+   $("#texto").slideToggle();
+   });</code></pre>
 
     <button id="btnToggle" class="btn btn-primary">Mostrar Explicação</button>
     <div id="texto" class="mt-3" style="display: none;">
@@ -94,10 +128,10 @@
     <p>Podemos aplicar efeitos ao passar o mouse em um elemento com jQuery.</p>
 
     <pre><code>$(".box").hover(function() {
-  $(this).css("background-color", "#d4edda");
-}, function() {
-  $(this).css("background-color", "#f8f9fa");
-});</code></pre>
+    $(this).css("background-color", "#d4edda");
+    }, function() {
+    $(this).css("background-color", "#f8f9fa");
+   });</code></pre>
 
     <div class="box p-3 border" style="background-color: #f8f9fa;">
       Passe o mouse aqui para ver o efeito com jQuery.
