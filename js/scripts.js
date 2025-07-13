@@ -38,3 +38,15 @@ $(document).ready(function(){
       $('.gerado2').remove();
     });
  });
+
+ 
+$(document).ready(function(){
+   $('#btnToggleMap').click(function(){
+    $('#mapContainer').slideToggle();
+    });
+  });
+$(document).ready(function(){
+   $('#btnToggleMap').click(function(){
+    $('#mapContainer1').slideToggle();
+    });
+  });
