@@ -18,6 +18,7 @@
       <a class="navbar-brand" href="#">IFMT - Frameworks</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="ifmt.html">IFMT</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html">Campus</a></li>
           <li class="nav-item"><a class="nav-link" href="curso.html">Curso</a></li>
           <li class="nav-item"><a class="nav-link active" href="frameworks.html">Frameworks</a></li>
@@ -43,18 +44,20 @@
         <li><strong>Remover</strong>: apaga todos os textos adicionados pelos dois botões acima.</li>
       </ul>
     </div>
-      <pre><code>$(document).ready(function(){
-        $("#btn1").click(function(){
-          $("img").before('<span class="gerado1"><b>o texto comerça aqui,</b></span>');
+      <pre><code>
+        $(document).ready(function(){
+          $("#btn1").click(function(){
+            $("img").before('<span class="gerado1"><b>o texto comerça aqui,</b></span>');
+          });
+          $('#btn2').click(function () {
+              $('img').after('<span class="gerado2"><b> , o texto termina aqui</b></span>');
+            });
+          $('#remover').click(function () {
+              $('.gerado1').remove();
+              $('.gerado2').remove();
+            });
         });
-        $('#btn2').click(function () {
-            $('img').after('<span class="gerado2"><b> , o texto termina aqui</b></span>');
-          });
-        $('#remover').click(function () {
-            $('.gerado1').remove();
-            $('.gerado2').remove();
-          });
-        });</code></pre>
+      </code></pre>
 
 
 
