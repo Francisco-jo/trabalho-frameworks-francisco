@@ -5,3 +5,22 @@ h1, h2 {
   color: #1b5e20;
 }
 
+
+.test{
+  color: red;
+  font-size: 20px;
+}
+ .card.hover-green:hover {
+      background-color: #198754; /* bootstrap "success" */
+      color: #ffffff;
+      transition: background-color 0.3s ease;
+    }
+    .card.hover-green:hover .card-title,
+    .card.hover-green:hover .card-text {
+      color: #ffffff;
+    }
+
+.side-carousel img {
+      width: 100%;
+      height: auto;
+}
